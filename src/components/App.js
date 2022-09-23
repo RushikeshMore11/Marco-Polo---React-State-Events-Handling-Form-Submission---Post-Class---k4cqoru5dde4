@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 import '../styles/App.css';
 const App = () => {
-  const [alter,setAlter] = useState(false);
+  const [alter,setAlter] = useState(true);
 
   const handleClick = () =>{
     if(alter == false)
     setAlter(true);
     else
-    setAlter(false);
+    setAlter(false);                      
   }
 
   return (
