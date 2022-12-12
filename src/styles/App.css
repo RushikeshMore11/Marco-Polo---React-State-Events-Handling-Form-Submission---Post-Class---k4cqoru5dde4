@@ -45,6 +45,7 @@
     width: 100%;
 }
 .cntBtn{
+    margin: 10px;
     padding: 8px;
     border-radius: 8px;
     background-color: aqua;
@@ -58,4 +59,7 @@
     margin-bottom:1% ;
     padding: 1%;
     background-color: rgba(55, 90, 55, .7);
+}
+.resetHolder{
+    display: flex;
 }

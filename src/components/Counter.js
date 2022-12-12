@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { decreaseValue, increaseValue } from '../redux/Actions';
+import { decreaseValue, increaseValue, resetValue } from '../redux/Actions';
 
 const Counter = () => {
     const {count} = useSelector(state=>state.counterReducer);
@@ -12,7 +12,11 @@ const Counter = () => {
         <div className='counterHolder'>
             <p><button className='cntBtn' onClick={()=>{dispatch(increaseValue())}}>INCREMENT</button></p>
             <p className='actualCount'>Count is {count}</p>
+            <div className='resetHolder'>
             <p><button className='cntBtn' onClick={()=>{dispatch(decreaseValue())}}>DECREMENT</button></p>
+            <p>
+            <button className='cntBtn' onClick={()=>{dispatch(resetValue())}}>RESET</button></p>
+            </div>
         </div>
     </>
   )
