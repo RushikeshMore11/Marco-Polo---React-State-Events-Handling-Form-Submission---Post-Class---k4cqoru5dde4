@@ -63,3 +63,9 @@
 .resetHolder{
     display: flex;
 }
+#count{
+    border-radius: 10px;
+    font-weight: 800;
+    padding: 10px;
+    background-color: rgba(142, 206, 233, 0.836);
+}
