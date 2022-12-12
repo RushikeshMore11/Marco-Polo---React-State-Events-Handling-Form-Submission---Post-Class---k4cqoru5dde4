@@ -1,21 +1,22 @@
-import React, { useState } from 'react'
-import '../styles/App.css';
+import React from 'react'
+import Counter from './Counter';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Home from './Home';
+import Navigation from './navigate/Navigation';
+import About from './About';
+import Contact from './Contact';
 const App = () => {
-  const [h1, setH1] = useState("Marco");
-  const [btn, setBtn] = useState("Polo");
-
-  const handleClick = () => {
-      setH1(btn);
-      setBtn(h1);
-  }
-
   return (
-    <div id="main">
-      <h1 id="marco-polo">{h1}</h1>
-      <button id="marco-polo-toggler" onClick={handleClick}>{btn}</button>
-    </div>
+    <BrowserRouter>
+      <Navigation/>
+      <Routes>
+        <Route path='/' element={<Home/>}  />
+        <Route path='/about' element={<About/>} />
+        <Route path='/contact' element={<Contact/>} />
+        <Route path='/counter' element={<Counter/>} />
+      </Routes> 
+    </BrowserRouter>
   )
 }
-
 
 export default App;
