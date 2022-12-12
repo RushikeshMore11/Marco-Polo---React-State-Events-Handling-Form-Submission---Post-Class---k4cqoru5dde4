@@ -7,8 +7,8 @@ const Counter = () => {
     const dispatch = useDispatch();
     const data = useSelector(state=>state.inputReducer);
     console.log(data);
-  return (
-    <>
+    return (
+        <>
         <div className='counterHolder'>
             <p><button className='cntBtn' onClick={()=>{dispatch(increaseValue())}}>INCREMENT</button></p>
             <p className='actualCount'>Count is {count}</p>
